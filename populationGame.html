@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Country Population: Higher or Lower?</title>
+   <link rel="icon" href="/Image Assets/siteLogo.png" type="Image/png">
+   <link rel="stylesheet" href="styles.css">
+   <link rel="stylesheet" href="stylesv2.css">
+</head>
+
+<body>
+   <div class="backButton"><a href="mainMenu.html">
+         <img src="Image Assets/back-arrow.svg" alt="" class="backButtonSVG">
+         <p class="backButtonText">Back</p>
+      </a>
+   </div>
+   <div class="container">
+      <header>
+         <h1>Population Showdown</h1>
+         <div class="score-container">
+            <div class="high-score">
+               <span>High Score:</span>
+               <span id="highScore">0</span>
+            </div>
+            <div class="current-score">
+               <span>Score:</span>
+               <span id="score">0</span>
+            </div>
+
+         </div>
+      </header>
+
+      <div class="game-container" id="gameContainer">
+         <div class="game-status" id="gameStatus">
+            <p>Which country has a <strong>higher</strong> population?</p>
+         </div>
+
+         <div class="countries-container">
+            <div class="country left" id="leftCountry">
+               <div class="flag-container">
+                  <img src="/placeholder.svg" alt="Country Flag" id="leftFlag">
+               </div>
+               <h2 id="leftName"></h2>
+               <div class="population">
+                  <span id="leftPopulation"></span>
+               </div>
+            </div>
+
+            <div class="vs">VS</div>
+
+            <div class="country right" id="rightCountry">
+               <div class="flag-container">
+                  <img src="/placeholder.svg" alt="Country Flag" id="rightFlag">
+               </div>
+               <h2 id="rightName"></h2>
+               <div class="population hidden">
+                  <span id="rightPopulation"></span>
+               </div>
+               <div class="buttons">
+                  <button id="higherBtn">HIGHER</button>
+                  <button id="lowerBtn">LOWER</button>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div class="game-over hidden" id="gameOver">
+         <h2>Game Over!</h2>
+         <p>Your score: <span id="finalScore">0</span></p>
+         <button id="playAgainBtn">Play Again</button>
+      </div>
+
+      <div class="loading" id="loading">
+         <div class="spinner"></div>
+         <p>Loading countries...</p>
+         <div class="manual-start">
+            <p>If loading takes too long, click below:</p>
+            <button id="startGameBtn">Start Game Now</button>
+         </div>
+      </div>
+   </div>
+
+   <!-- Load scripts in the correct order -->
+   <script src="countries.js"></script>
+   <script src="script.js"></script>
+</body>
+
+</html>

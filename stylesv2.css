@@ -1,0 +1,41 @@
+.backButton {
+   position: fixed;
+   top: 15px;
+   left: 15px;
+   display: flex;
+   align-items: center;
+   padding: 8px 12px;
+   border-radius: 20px;
+   cursor: pointer;
+   transition: all 0.2s ease;
+   z-index: 100;
+   max-width: 100px;
+}
+
+.backButton:hover {
+   transform: translateX(-2px);
+}
+
+.backButton a {
+   display: flex;
+   align-items: center;
+   text-decoration: none;
+   color: inherit;
+}
+
+.backButtonSVG {
+   width: 16px;
+   height: 16px;
+   margin-right: 4px;
+   margin-top: 4px;
+   filter: brightness(0) invert(1);
+}
+
+
+.backButtonText {
+   font-size: 16px;
+   font-weight: 500;
+   color: #e7dcdc;
+   margin: 0; 
+   padding: 0;
+}

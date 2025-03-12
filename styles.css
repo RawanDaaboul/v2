@@ -1,0 +1,258 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+   background-color:#040534;
+}
+
+.container {
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 20px;
+}
+
+header {
+   text-align: center;
+   margin-bottom: 30px;
+}
+
+h1 {
+   font-size: 2.5rem;
+   margin-bottom: 15px;
+   color: #2c3e50;
+}
+
+.score-container {
+   display: flex;
+   justify-content: center;
+   gap: 30px;
+   font-size: 1.2rem;
+}
+
+.current-score, .high-score {
+   background-color: #fff;
+   padding: 10px 20px;
+   border-radius: 10px;
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.game-container {
+   background-color: #fff;
+   border-radius: 15px;
+   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+   padding: 30px;
+   margin-bottom: 30px;
+}
+
+.game-status {
+   text-align: center;
+   margin-bottom: 20px;
+   font-size: 1.3rem;
+}
+
+.countries-container {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   gap: 20px;
+}
+
+.country {
+   flex: 1;
+   text-align: center;
+   padding: 20px;
+   border-radius: 10px;
+   transition: all 0.3s ease;
+   position: relative;
+}
+
+.country.left {
+   background-color: #e3f2fd;
+}
+
+.country.right {
+   background-color: #f3e5f5;
+}
+
+.flag-container {
+   width: 100%;
+   height: 150px;
+   margin-bottom: 15px;
+   overflow: hidden;
+   border-radius: 5px;
+   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+   background-color: #eee;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.flag-container img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+.country h2 {
+   font-size: 1.5rem;
+   margin-bottom: 15px;
+   color: #2c3e50;
+}
+
+.population {
+   font-size: 1.3rem;
+   font-weight: bold;
+   margin-bottom: 20px;
+   padding: 10px;
+   background-color: rgba(0, 0, 0, 0.05);
+   border-radius: 5px;
+}
+
+.vs {
+   font-size: 2rem;
+   font-weight: bold;
+   color: #e74c3c;
+}
+
+.buttons {
+   display: flex;
+   justify-content: center;
+   gap: 15px;
+   margin-top: 20px;
+}
+
+button {
+   padding: 12px 25px;
+   font-size: 1rem;
+   font-weight: bold;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: all 0.2s ease;
+}
+
+#higherBtn {
+   background-color: #2ecc71;
+   color: white;
+}
+
+#lowerBtn {
+   background-color: #e74c3c;
+   color: white;
+}
+
+button:hover {
+   transform: translateY(-3px);
+   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+button:active {
+   transform: translateY(0);
+}
+
+.game-over {
+   text-align: center;
+   background-color: #fff;
+   padding: 30px;
+   border-radius: 15px;
+   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.game-over h2 {
+   font-size: 2rem;
+   margin-bottom: 15px;
+   color: #e74c3c;
+}
+
+.game-over p {
+   font-size: 1.3rem;
+   margin-bottom: 20px;
+}
+
+#playAgainBtn, #startGameBtn {
+   background-color: #3498db;
+   color: white;
+   padding: 12px 30px;
+   font-size: 1.1rem;
+}
+
+.hidden {
+   display: none !important;
+}
+
+.loading {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(255, 255, 255, 0.9);
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   z-index: 1000;
+}
+
+.spinner {
+   width: 50px;
+   height: 50px;
+   border: 5px solid #f3f3f3;
+   border-top: 5px solid #3498db;
+   border-radius: 50%;
+   animation: spin 1s linear infinite;
+   margin-bottom: 20px;
+}
+
+@keyframes spin {
+   0% { transform: rotate(0deg); }
+   100% { transform: rotate(360deg); }
+}
+
+.correct {
+   animation: correct 0.5s;
+}
+
+.incorrect {
+   animation: incorrect 0.5s;
+}
+
+@keyframes correct {
+   0% { background-color: #e3f2fd; }
+   50% { background-color: #a5d6a7; }
+   100% { background-color: #e3f2fd; }
+}
+
+@keyframes incorrect {
+   0% { background-color: #f3e5f5; }
+   50% { background-color: #ef9a9a; }
+   100% { background-color: #f3e5f5; }
+}
+
+.manual-start {
+   text-align: center;
+   margin-top: 20px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+   .countries-container {
+       flex-direction: column;
+   }
+   
+   .vs {
+       margin: 10px 0;
+   }
+   
+   .country {
+       width: 100%;
+   }
+   
+   .flag-container {
+       height: 120px;
+   }
+}
