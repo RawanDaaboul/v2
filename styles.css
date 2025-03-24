@@ -6,24 +6,23 @@
 }
 
 body {
-   background-color:#040534;
+   background-color:#010e1e;
 }
 
+p{
+   color:#83868b;
+   font-size: 1.1rem;
+}
 .container {
-   max-width: 1200px;
+   max-width:100%;
    margin: 0 auto;
    padding: 20px;
 }
 
 header {
    text-align: center;
-   margin-bottom: 30px;
-}
-
-h1 {
-   font-size: 2.5rem;
-   margin-bottom: 15px;
-   color: #2c3e50;
+   margin-top:10px;
+   display:inline;
 }
 
 .score-container {
@@ -34,18 +33,14 @@ h1 {
 }
 
 .current-score, .high-score {
-   background-color: #fff;
+   background-color: #010e1e;
    padding: 10px 20px;
-   border-radius: 10px;
-   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+   color:#f6f6f7;
 }
 
 .game-container {
-   background-color: #fff;
-   border-radius: 15px;
-   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+   background-color: #010e1e;
    padding: 30px;
-   margin-bottom: 30px;
 }
 
 .game-status {
@@ -65,27 +60,21 @@ h1 {
    flex: 1;
    text-align: center;
    padding: 20px;
-   border-radius: 10px;
    transition: all 0.3s ease;
    position: relative;
+   color: #f6f6f7;
 }
 
-.country.left {
-   background-color: #e3f2fd;
+.country right{
+   border-left: 3px solid #f6f6f7;
 }
-
-.country.right {
-   background-color: #f3e5f5;
-}
-
 .flag-container {
-   width: 100%;
-   height: 150px;
+   width: 190px;
+   height: 190px;
    margin-bottom: 15px;
+   margin: 0 auto;
    overflow: hidden;
-   border-radius: 5px;
-   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-   background-color: #eee;
+   background-color: #010e1e;
    display: flex;
    align-items: center;
    justify-content: center;
@@ -95,56 +84,67 @@ h1 {
    width: 100%;
    height: 100%;
    object-fit: cover;
+   border-radius:50%;
 }
 
 .country h2 {
-   font-size: 1.5rem;
+   font-size: 1.7rem;
    margin-bottom: 15px;
-   color: #2c3e50;
+   margin-top:2rem;
+   color: #f6f6f7;
 }
 
 .population {
-   font-size: 1.3rem;
+   font-size: 3.3rem;
    font-weight: bold;
-   margin-bottom: 20px;
    padding: 10px;
-   background-color: rgba(0, 0, 0, 0.05);
-   border-radius: 5px;
 }
 
 .vs {
    font-size: 2rem;
    font-weight: bold;
-   color: #e74c3c;
+   color: #f6f6f7;
 }
 
 .buttons {
    display: flex;
+   flex-direction: column;
    justify-content: center;
+   align-items: center;
    gap: 15px;
    margin-top: 20px;
 }
 
 button {
+   width: 150px;
+   height:40px;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
    padding: 12px 25px;
    font-size: 1rem;
    font-weight: bold;
    border: none;
-   border-radius: 5px;
    cursor: pointer;
    transition: all 0.2s ease;
 }
 
 #higherBtn {
-   background-color: #2ecc71;
-   color: white;
+   background-color: #3423a6;
+   color: #f6f6f7;
+
 }
 
 #lowerBtn {
-   background-color: #e74c3c;
-   color: white;
+   background-color: #db162f;
+   color: #f6f6f7;
 }
 
+.buttons img{
+      width: 24px;
+      height: 24px;
+      filter: brightness(0) invert(1);
+}
 button:hover {
    transform: translateY(-3px);
    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);

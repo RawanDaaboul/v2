@@ -11,31 +11,26 @@
 </head>
 
 <body>
-   <div class="backButton"><a href="mainMenu.html">
-         <img src="Image Assets/back-arrow.svg" alt="" class="backButtonSVG">
-         <p class="backButtonText">Back</p>
-      </a>
-   </div>
+   <header>
+      <div class="backButton">
+         <a href="mainMenu.html">
+            <img src="Image Assets/back-arrow.svg" alt="" class="backButtonSVG">
+            <p class="backButtonText">Back</p>
+         </a>
+      </div>
+      <div class="score-container">
+         <div class="high-score">
+            <span>High Score:</span>
+            <span id="highScore">0</span>
+         </div>
+         <div class="current-score">
+            <span>Score:</span>
+            <span id="score">0</span>
+         </div>
+      </div>
+   </header>
    <div class="container">
-      <header>
-         <h1>Population Showdown</h1>
-         <div class="score-container">
-            <div class="high-score">
-               <span>High Score:</span>
-               <span id="highScore">0</span>
-            </div>
-            <div class="current-score">
-               <span>Score:</span>
-               <span id="score">0</span>
-            </div>
-
-         </div>
-      </header>
-
       <div class="game-container" id="gameContainer">
-         <div class="game-status" id="gameStatus">
-            <p>Which country has a <strong>higher</strong> population?</p>
-         </div>
 
          <div class="countries-container">
             <div class="country left" id="leftCountry">
@@ -43,9 +38,11 @@
                   <img src="/placeholder.svg" alt="Country Flag" id="leftFlag">
                </div>
                <h2 id="leftName"></h2>
+               <p>has</p>
                <div class="population">
                   <span id="leftPopulation"></span>
                </div>
+               <p>people</p>
             </div>
 
             <div class="vs">VS</div>
@@ -58,9 +55,10 @@
                <div class="population hidden">
                   <span id="rightPopulation"></span>
                </div>
+               <p>is</p>
                <div class="buttons">
-                  <button id="higherBtn">HIGHER</button>
-                  <button id="lowerBtn">LOWER</button>
+                  <button id="higherBtn"><img src="Image Assets/up-arrow.svg" alt=""><span>HIGHER</span></button>
+                  <button id="lowerBtn"><img src="Image Assets/down-arrow.svg" alt=""><span>LOWER</span></button>
                </div>
             </div>
          </div>
