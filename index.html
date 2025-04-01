@@ -11,16 +11,22 @@
 </head>
 
 <body>
-   <video autoplay loop id="background-video" class="gif" src="/Image Assets/goodTime.mp4"></video>
-   <!-- muted -->
    <div class="main">
       <h1>coming soon, meanwhile enjoy:</h1>
-      <p>Country Population Higher / Lower Game</p>
-      <a href="populationGame.html">
-         <button class="buttonPlaceholder">
-            Play Now!
-         </button>
+      <p>Country Population <span>Higher / Lower</span> Game</p>
+      <button class="buttonPlaceholder">
+         <a href="populationGame.html">
+            Play Now!</button>
       </a>
    </div>
+   <video autoplay loop muted src="/Image Assets/goodTime.mp4" class="gif" id="video"></video>
+   <script>
+   const video = document.getElementById("video");
+      window.addEventListener("click", () => {
+        video.muted = false;
+        video.volume = 1.0;
+        video.play();
+      });
+    </script>
 </body>
 </html>

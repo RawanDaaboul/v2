@@ -28,6 +28,7 @@ const playAgainBtn = document.getElementById('playAgainBtn');
 const loadingElement = document.getElementById('loading');
 const gameContainer = document.getElementById('gameContainer');
 const startGameBtn = document.getElementById('startGameBtn');
+const Header = document.querySelector('header')
 
 // Initialize the game
 function initGame() {
@@ -50,7 +51,7 @@ function initGame() {
         // Hide loading screen and show game
         loadingElement.classList.add('hidden');
         gameContainer.classList.remove('hidden');
-        
+        Header.classList.remove('hidden');
     } catch (error) {
         console.error('Error initializing game:', error);
         alert('There was an error starting the game. Please refresh the page and try again.');
@@ -159,6 +160,7 @@ function updateCountryDisplay() {
     
     // Hide right country population
     document.querySelector('.right .population').classList.add('hidden');
+    
 }
 
 // Format population number with commas
@@ -231,6 +233,7 @@ function gameOver() {
     finalScoreElement.textContent = score;
     gameOverElement.classList.remove('hidden');
     gameContainer.classList.add('hidden');
+    Header.classList.add('hidden');
 }
 
 // Reset the game
@@ -247,6 +250,7 @@ function resetGame() {
     
     gameOverElement.classList.add('hidden');
     gameContainer.classList.remove('hidden');
+    Header.classList.remove('hidden');
     document.querySelector('.right .population').classList.add('hidden');
     document.getElementById('rightCountry').classList.remove('incorrect');
     enableButtons();

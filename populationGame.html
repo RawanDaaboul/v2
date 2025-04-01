@@ -8,6 +8,7 @@
    <link rel="icon" href="/Image Assets/siteLogo.png" type="Image/png">
    <link rel="stylesheet" href="styles.css">
    <link rel="stylesheet" href="stylesv2.css">
+   <link rel="stylesheet" href="responsive.css">
 </head>
 
 <body>
@@ -19,14 +20,7 @@
          </a>
       </div>
       <div class="score-container">
-         <div class="high-score">
-            <span>High Score:</span>
-            <span id="highScore">0</span>
-         </div>
-         <div class="current-score">
-            <span>Score:</span>
-            <span id="score">0</span>
-         </div>
+         
       </div>
    </header>
    <div class="container">
@@ -34,8 +28,12 @@
 
          <div class="countries-container">
             <div class="country left" id="leftCountry">
+               <div class="high-score">
+                  <span>High Score:</span>
+                  <span id="highScore">0</span>
+               </div>
                <div class="flag-container">
-                  <img src="/placeholder.svg" alt="Country Flag" id="leftFlag">
+                  <img alt="Country Flag" id="leftFlag">
                </div>
                <h2 id="leftName"></h2>
                <p>has</p>
@@ -45,11 +43,19 @@
                <p>people</p>
             </div>
 
-            <div class="vs">VS</div>
+            <div class="vs-container">
+               <div class="line">
+                  <div class="vs">VS</div>
+               </div>
+             </div>
 
             <div class="country right" id="rightCountry">
+               <div class="current-score">
+                  <span>Score:</span>
+                  <span id="score">0</span>
+               </div>
                <div class="flag-container">
-                  <img src="/placeholder.svg" alt="Country Flag" id="rightFlag">
+                  <img alt="Country Flag" id="rightFlag">
                </div>
                <h2 id="rightName"></h2>
                <div class="population hidden">
@@ -57,8 +63,8 @@
                </div>
                <p>is</p>
                <div class="buttons">
-                  <button id="higherBtn"><img src="Image Assets/up-arrow.svg" alt=""><span>HIGHER</span></button>
-                  <button id="lowerBtn"><img src="Image Assets/down-arrow.svg" alt=""><span>LOWER</span></button>
+                  <button class="higher-lower_button" id="higherBtn"><img src="Image Assets/up-arrow.svg" alt=""><span>HIGHER</span></button>
+                  <button class="higher-lower_button" id="lowerBtn"><img src="Image Assets/down-arrow.svg" alt=""><span>LOWER</span></button>
                </div>
             </div>
          </div>
